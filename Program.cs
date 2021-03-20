@@ -6,20 +6,23 @@ namespace Medidas
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             String entrada;
-            double metros, centimetros, quilometros;
+            double metros, centimetros, quilometros, km;
 
             Console.Write("Entre com a medida (em metros): ");
             entrada = Console.ReadLine();
 
             metros = Convert.ToDouble(entrada);
             centimetros = metros * 100;
-            quilometros = metros / 1000;
-
+            km = metros / 1000;
+            quilometros = metros * 0.001;
+           
             Console.WriteLine ("\n--- Equivalencia ---");
-            Console.WriteLine($"{centimetros:N2} CM");
-            Console.WriteLine($"{metros:N1} M");
-            Console.WriteLine($"{quilometros:N3} KM");
+            Console.WriteLine($"{centimetros} CM");
+            Console.WriteLine($"{metros} M");
+            Console.WriteLine($"{km} KM");
+            Console.WriteLine($"Sabendo que 1 metro é = 0,001 e você digitou {entrada} a medida é {quilometros} Km");
 
             
         }
